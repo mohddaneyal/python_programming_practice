@@ -4,12 +4,13 @@ def merge_the_tools(s, k):
     for i in range(0, len(s), k):
         # Get the current substring
         substring = s[i:i + k]
-        #print(substring)
-        #print(dict.fromkeys(substring))
-        print(''.join(dict.fromkeys(substring)))
+        result = []
+        for char in substring:
+            if char not in result:
+                result.append(char)
 
-        # Join and print the result for this substring
-        #print(''.join(result))
+        print(''.join(result))
+
 
 
 if __name__ == '__main__':
